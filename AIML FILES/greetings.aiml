@@ -1,0 +1,238 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Bot Name Management -->
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>
+            <condition name="bot_name">
+                <li value="">My name is EAGLE WINGS.</li>
+                <li>My name is <get name="bot_name"/>.</li>
+            </condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* WHAT IS YOUR NAME *</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS YOUR NAME *</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* WHO ARE YOU</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* YOUR NAME *</pattern>
+        <template>
+            <srai>WHAT IS YOUR NAME</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>NOW YOUR NAME IS *</pattern>
+        <template>
+            <think>
+                <set name="bot_name"><star/></set>
+            </think>
+            OK! Now my name is <star/>.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* NEW NAME *</pattern>
+        <template>
+            <srai>NOW YOUR NAME IS <star/></srai>
+        </template>
+    </category>
+
+    <!-- Greeting and Small Talk -->
+    <category>
+        <pattern>HELLO</pattern>
+        <template>Hello! How can I assist you today?</template>
+    </category>
+
+    <category>
+        <pattern>* HOW ARE YOU</pattern>
+        <template>Hello! I'M FINE, HOW ARE YOU?</template>
+    </category>
+
+    <category>
+        <pattern>HY</pattern>
+        <template>Hello! How can I assist you today?</template>
+    </category>
+
+    <category>
+        <pattern>HY *</pattern>
+        <template>Hello! How can I assist you today?</template>
+    </category>
+
+    <category>
+        <pattern>HE</pattern>
+        <template>Hello! How can I assist you today?</template>
+    </category>
+
+    <category>
+        <pattern>WHO MADE YOU</pattern>
+        <template>I was made by Adam Khan.</template>
+    </category>
+
+    <category>
+        <pattern>WHO IS YOUR OWNER</pattern>
+        <template>
+            <srai>WHO MADE YOU</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO INVENTED YOU</pattern>
+        <template>
+            <srai>WHO MADE YOU</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO IS YOUR INVENTOR</pattern>
+        <template>
+            <srai>WHO MADE YOU</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YOU WERE INVENTED BY WHOM</pattern>
+        <template>
+            <srai>WHO MADE YOU</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HI</pattern>
+        <template>Hi there! What can I do for you?</template>
+    </category>
+
+    <category>
+        <pattern>HI *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HEY</pattern>
+        <template>Hey! How’s it going?</template>
+    </category>
+
+    <category>
+        <pattern>HEY *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>HELLO *</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FINE</pattern>
+        <template>
+            Great! So how can I help you?
+        </template>
+    </category>
+
+    <category>
+        <pattern>GOOD MORNING</pattern>
+        <template>Good morning! Hope you have a wonderful day. How can I help you today?</template>
+    </category>
+
+    <category>
+        <pattern>GOOD AFTERNOON</pattern>
+        <template>Good afternoon! What can I assist you with today?</template>
+    </category>
+
+    <category>
+        <pattern>GOOD EVENING</pattern>
+        <template>Good evening! How can I be of service today?</template>
+    </category>
+
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>I'm here and ready to assist you! How are you?</template>
+    </category>
+
+    <category>
+        <pattern>I AM FINE</pattern>
+        <template>Great to hear! Let me know if there’s anything you need help with.</template>
+    </category>
+
+    <category>
+        <pattern>WHAT'S UP</pattern>
+        <template>Just here to help you! What’s up with you?</template>
+    </category>
+
+    <category>
+        <pattern>HELLO THERE</pattern>
+        <template>Hello there! Nice to meet you. How can I assist?</template>
+    </category>
+
+    <category>
+        <pattern>GOOD TO SEE YOU</pattern>
+        <template>Thank you! It’s good to be here. How can I assist?</template>
+    </category>
+
+    <category>
+        <pattern>NICE TO MEET YOU</pattern>
+        <template>Nice to meet you too! How can I help?</template>
+    </category>
+
+    <category>
+        <pattern>BYE</pattern>
+        <template>Goodbye! Have a great day ahead. Feel free to chat anytime!</template>
+    </category>
+
+    <category>
+        <pattern>SEE YOU</pattern>
+        <template>See you soon! Take care.</template>
+    </category>
+
+    <category>
+        <pattern>TALK TO YOU LATER</pattern>
+        <template>Alright, talk to you later! I’ll be here when you need me.</template>
+    </category>
+
+    <category>
+        <pattern>* FUNCTIONS *</pattern>
+        <template>I can perform every Drone function i.e move up, down, left, right. I can also make the Rotation performs like yaw, spin and rotate.</template>
+    </category>
+
+    <category>
+        <pattern>GOOD</pattern>
+        <template>Glad! You Liked it!</template>
+    </category>
+    <category>
+        <pattern>GREAT</pattern>
+        <template>
+            <srai>GOOD</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>STUNNING</pattern>
+        <template>
+            <srai>GOOD</srai>
+        </template>
+    </category>
+
+</aiml>

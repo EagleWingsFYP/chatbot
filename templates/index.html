@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eagle Wings - Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <div class="chat-wrapper" id="chat-wrapper">
+        <!-- Header Section -->
+        <div class="chat-header">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" />
+            <span>Eagle Wings</span>
+            <div class="header-actions">
+            <button id="help-btn" title="Help"><i class="fas fa-question-circle"></i></button>
+            <button id="logout-btn" title="Log Out"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+
+        <!-- Persistent Menu -->
+        <div class="persistent-menu" id="persistent-menu">
+            <button class="menu-item" data-command="help"><i class="fas fa-question"></i> Help</button>
+            <button class="menu-item" data-command="options"><i class="fas fa-list"></i> Options</button>
+            <button class="menu-item" data-command="upload"><i class="fas fa-paperclip"></i> Attach File</button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container" id="chat-container">
+            <div class="welcome-message">
+                <p>Hello! I'm your Eagle Wings assistant. How can I help you today?</p>
+                <div class="quick-replies">
+                    <button class="quick-reply">Account Help</button>
+                    <button class="quick-reply">Order Status</button>
+                    <button class="quick-reply">FAQs</button>
+                </div>
+            </div>
+            
+            <div class="chat-history" id="chat-history">
+                <!-- Chat History -->
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Chat Input Section -->
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Type a message..." />
+                <button id="attachment-btn" title="Attach file"><i class="fas fa-paperclip"></i></button>
+                <input type="file" id="file-input" style="display: none;" />
+            </div>
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+            <button id="mic-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+    </div>
+
+    <!-- Scroll to Bottom Button -->
+    <button class="scroll-to-bottom-btn" id="scroll-to-bottom-btn"><i class="fas fa-chevron-down"></i></button>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

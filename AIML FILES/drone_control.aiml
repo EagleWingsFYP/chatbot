@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- Pattern for Move commands -->
+
+ <category>
+  <pattern>MOVE *</pattern>
+  <template>
+    The drone is moving <star/>!
+    <think>
+      <set name="direction"><star/></set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>* MOVE *</pattern>
+  <template>
+    <srai>MOVE <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>GO *</pattern>
+  <template>
+    <srai>MOVE <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* GO *</pattern>
+  <template>
+    <srai>MOVE <star index="2"/></srai>
+  </template>
+</category>
+
+<!-- Pattern for Take Off commands -->
+ <category>
+  <pattern>TAKE OFF</pattern>
+  <template>
+    The drone is Taking off!
+    <think>
+      <set name="direction">take off</set>
+    </think>
+  </template>
+</category>
+
+<!-- Pattern for Take Off commands -->
+ <category>
+  <pattern>FLIP</pattern>
+  <template>
+    The drone is FLIPPING!
+    <think>
+      <set name="direction">flip</set>
+    </think>
+  </template>
+</category>
+
+ <category>
+  <pattern>* TAKE OFF</pattern>
+  <template>
+    <srai>TAKE OFF</srai>
+  </template>
+</category>
+
+ <category>
+  <pattern>TAKE OFF *</pattern>
+  <template>
+    <srai>TAKE OFF</srai>
+  </template>
+</category>
+
+ <category>
+  <pattern>* TAKE OFF *</pattern>
+  <template>
+    <srai>TAKE OFF</srai>
+  </template>
+</category>
+
+ <category>
+  <pattern>LAND</pattern>
+  <template>
+    The drone is Landing!
+    <think>
+      <set name="direction">land</set>
+    </think>
+  </template>
+</category>
+
+ <category>
+  <pattern>* LAND</pattern>
+  <template>
+    <srai>LAND</srai>
+  </template>
+</category>
+
+ <category>
+  <pattern>LAND *</pattern>
+  <template>
+    <srai>LAND</srai>
+  </template>
+</category>
+
+ <category>
+  <pattern>* LAND *</pattern>
+  <template>
+    <srai>LAND</srai>
+  </template>
+</category>
+
+<!-- Pattern for YAW (ROTATE) commands -->
+
+<category>
+  <pattern>YAW *</pattern>
+  <template>
+    The drone is Rotating <star/>!
+    <think>
+      <set name="direction">YAW <star/></set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>* YAW *</pattern>
+  <template>
+    <srai>YAW <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>ROTATE *</pattern>
+  <template>
+    <srai>YAW <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* ROTATE *</pattern>
+  <template>
+    <srai>YAW <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>SPIN *</pattern>
+  <template>
+    <srai>YAW <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* SPIN *</pattern>
+  <template>
+    <srai>YAW <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>TURN *</pattern>
+  <template>
+    <srai>YAW <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* TURN *</pattern>
+  <template>
+    <srai>YAW <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>PITCH *</pattern>
+  <template>
+    The drone is Pitching <star/>!
+    <think>
+      <set name="direction">PITCH <star/></set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>* PITCH *</pattern>
+  <template>
+    <srai>PITCH <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>SHIFT *</pattern>
+  <template>
+    <srai>PITCH <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* SHIFT *</pattern>
+  <template>
+    <srai>PITCH <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>TILT *</pattern>
+  <template>
+    <srai>PITCH <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* TILT *</pattern>
+  <template>
+    <srai>PITCH <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>ROLL *</pattern>
+  <template>
+    The drone is Rolling <star/>!
+    <think>
+      <set name="direction">ROLL <star/></set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>* ROLL *</pattern>
+  <template>
+    <srai>ROLL <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>LEAN *</pattern>
+  <template>
+    <srai>ROLL <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* LEAN *</pattern>
+  <template>
+    <srai>ROLL <star index="2"/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>*</pattern>
+  <template>
+    I'm sorry, I didn't understand that command. Please try again.
+  </template>
+</category>
+
+<category>
+    <pattern>DETECT FACE</pattern>
+    <template>Initiating face detection protocol...</template>
+  </category>
+
+  <category>
+    <pattern>SCAN FACE</pattern>
+    <template>Sure! Scanning for faces now...</template>
+  </category>
+
+</aiml>
