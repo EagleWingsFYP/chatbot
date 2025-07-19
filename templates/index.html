@@ -12,11 +12,12 @@
     <div class="chat-wrapper" id="chat-wrapper">
         <!-- Header Section -->
         <div class="chat-header">
+            <button id="theme-toggle" title="Toggle theme" class="theme-toggle-btn"><i class="fas fa-circle-half-stroke"></i></button>
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" />
             <span>Eagle Wings</span>
             <div class="header-actions">
-            <button id="help-btn" title="Help"><i class="fas fa-question-circle"></i></button>
-            <button id="logout-btn" title="Log Out"><i class="fas fa-sign-out-alt"></i></button>
+                <button id="help-btn" title="Help"><i class="fas fa-question-circle"></i></button>
+                <button id="logout-btn" title="Log Out"><i class="fas fa-sign-out-alt"></i></button>
             </div>
         </div>
 
@@ -32,8 +33,8 @@
             <div class="welcome-message">
                 <p>Hello! I'm your Eagle Wings assistant. How can I help you today?</p>
                 <div class="quick-replies">
-                    <button class="quick-reply">Account Help</button>
-                    <button class="quick-reply">Order Status</button>
+                    <button class="quick-reply">Track Face</button>
+                    <button class="quick-reply">Gesture Control</button>
                     <button class="quick-reply">FAQs</button>
                 </div>
             </div>
@@ -65,8 +66,7 @@
     <!-- Scroll to Bottom Button -->
     <button class="scroll-to-bottom-btn" id="scroll-to-bottom-btn"><i class="fas fa-chevron-down"></i></button>
 
-    <!-- Theme Toggle Button -->
-    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

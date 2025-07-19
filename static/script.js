@@ -133,3 +133,20 @@ if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
     micBtn.disabled = true;
     micBtn.title = 'Speech recognition not supported in this browser.';
 }
+
+document.querySelectorAll('.quick-reply').forEach(btn => {
+    btn.addEventListener('click', function() {
+        if (btn.textContent.trim() === 'Track Face') {
+            fetch('/start_face_detection', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => alert(data.message || 'Please wait Face detection will be started!'));
+        } else if (btn.textContent.trim() === 'Gesture Control') {
+            fetch('/start_gesture_control', { method: 'POST' })
+                .then(res => res.json())
+                .then(data => alert(data.message || 'Please wait Gesture control will be started!'));
+        } else {
+            document.getElementById('user-input').value = btn.textContent.trim();
+            sendMessage();
+        }
+    });
+});
