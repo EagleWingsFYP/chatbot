@@ -262,4 +262,217 @@
     <template>Sure! Scanning for faces now...</template>
   </category>
 
+<!-- Stability and Calibration Commands -->
+<category>
+  <pattern>CALIBRATE</pattern>
+  <template>
+    🔧 Starting drone calibration to improve stability...
+    <think>
+      <set name="direction">calibrate</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>CALIBRATION</pattern>
+  <template>
+    <srai>CALIBRATE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>STABILIZE</pattern>
+  <template>
+    🔄 Stabilizing drone and stopping all movement...
+    <think>
+      <set name="direction">stabilize</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>HOVER</pattern>
+  <template>
+    <srai>STABILIZE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>EMERGENCY STOP</pattern>
+  <template>
+    🚨 Emergency stop! Cutting all motors...
+    <think>
+      <set name="direction">emergency stop</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>STOP DRONE</pattern>
+  <template>
+    <srai>EMERGENCY STOP</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>DRONE STABILITY</pattern>
+  <template>
+    Here are some tips to improve drone stability:
+    
+    1. 🔧 **Calibrate the drone** - Say "calibrate" to start calibration
+    2. 🔋 **Check battery** - Ensure battery is above 20%
+    3. 🌬️ **Avoid wind** - Fly in calm conditions
+    4. 📍 **Flat surface** - Take off from a level, non-slippery surface
+    5. 🧹 **Clean propellers** - Remove dust and debris
+    6. 🔄 **Stabilize** - Say "stabilize" to stop all movement
+    
+    Try saying "calibrate" first to improve stability!
+  </template>
+</category>
+
+<category>
+  <pattern>DRONE TIPS</pattern>
+  <template>
+    <srai>DRONE STABILITY</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>STABILITY HELP</pattern>
+  <template>
+    <srai>DRONE STABILITY</srai>
+  </template>
+</category>
+
+<!-- Charging Spot Takeoff Commands -->
+<category>
+  <pattern>TAKE OFF FROM CHARGING</pattern>
+  <template>
+    🚁 Starting special takeoff sequence from charging spot...
+    <think>
+      <set name="direction">take off</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>TAKEOFF FROM CHARGING</pattern>
+  <template>
+    <srai>TAKE OFF FROM CHARGING</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>LEAVE CHARGING SPOT</pattern>
+  <template>
+    <srai>TAKE OFF FROM CHARGING</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>EXIT CHARGING</pattern>
+  <template>
+    <srai>TAKE OFF FROM CHARGING</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>CHARGING SPOT TAKEOFF</pattern>
+  <template>
+    <srai>TAKE OFF FROM CHARGING</srai>
+  </template>
+</category>
+
+<!-- Drone State Preservation Commands (Default Behavior) -->
+<category>
+  <pattern>PRESERVE DRONE</pattern>
+  <template>
+    🔄 Preserving drone state and maintaining current position...
+    <think>
+      <set name="direction">preserve drone</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>MAINTAIN POSITION</pattern>
+  <template>
+    <srai>PRESERVE DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>KEEP POSITION</pattern>
+  <template>
+    <srai>PRESERVE DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>STOP MOVEMENT</pattern>
+  <template>
+    <srai>PRESERVE DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>HOVER</pattern>
+  <template>
+    <srai>PRESERVE DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>DRONE PRESERVE</pattern>
+  <template>
+    <srai>PRESERVE DRONE</srai>
+  </template>
+</category>
+
+<!-- Drone State Reset Commands (Use Only When Necessary) -->
+<category>
+  <pattern>RESET DRONE</pattern>
+  <template>
+    🚨 Resetting drone state and stopping all movement...
+    <think>
+      <set name="direction">reset drone</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>RESET DRONE STATE</pattern>
+  <template>
+    <srai>RESET DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>CLEAR DRONE STATE</pattern>
+  <template>
+    <srai>RESET DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>NEUTRALIZE DRONE</pattern>
+  <template>
+    <srai>RESET DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>EMERGENCY RESET</pattern>
+  <template>
+    <srai>RESET DRONE</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>DRONE RESET</pattern>
+  <template>
+    <srai>RESET DRONE</srai>
+  </template>
+</category>
+
 </aiml>
