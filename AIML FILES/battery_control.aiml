@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!-- Battery Status Queries -->
+<category>
+  <pattern>BATTERY STATUS</pattern>
+  <template>
+    Let me check the battery status for you.
+    <think>
+      <set name="direction">battery status</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>CHECK BATTERY</pattern>
+  <template>
+    <srai>BATTERY STATUS</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY LEVEL</pattern>
+  <template>
+    <srai>BATTERY STATUS</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>HOW MUCH BATTERY</pattern>
+  <template>
+    <srai>BATTERY STATUS</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY PERCENTAGE</pattern>
+  <template>
+    <srai>BATTERY STATUS</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* BATTERY *</pattern>
+  <template>
+    <srai>BATTERY STATUS</srai>
+  </template>
+</category>
+
+<!-- Battery Warning Responses -->
+<category>
+  <pattern>BATTERY WARNING</pattern>
+  <template>
+    ⚠️ Battery warning detected! The drone battery is running low. I'll help you find a charging spot.
+    <think>
+      <set name="direction">battery warning</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>LOW BATTERY</pattern>
+  <template>
+    <srai>BATTERY WARNING</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY LOW</pattern>
+  <template>
+    <srai>BATTERY WARNING</srai>
+  </template>
+</category>
+
+<!-- Critical Battery Responses -->
+<category>
+  <pattern>CRITICAL BATTERY</pattern>
+  <template>
+    🚨 CRITICAL BATTERY ALERT! The drone battery is critically low. Initiating emergency charging protocol and searching for ArUco marker charging spot.
+    <think>
+      <set name="direction">critical battery</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>EMERGENCY BATTERY</pattern>
+  <template>
+    <srai>CRITICAL BATTERY</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY CRITICAL</pattern>
+  <template>
+    <srai>CRITICAL BATTERY</srai>
+  </template>
+</category>
+
+<!-- Charging Commands -->
+<category>
+  <pattern>FIND CHARGING SPOT</pattern>
+  <template>
+    🔍 Searching for ArUco marker charging spot...
+    <think>
+      <set name="direction">find charging spot</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>SEARCH CHARGING</pattern>
+  <template>
+    <srai>FIND CHARGING SPOT</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>LOOK FOR CHARGER</pattern>
+  <template>
+    <srai>FIND CHARGING SPOT</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>GO TO CHARGING</pattern>
+  <template>
+    <srai>FIND CHARGING SPOT</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>CHARGING SPOT</pattern>
+  <template>
+    <srai>FIND CHARGING SPOT</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>* CHARGING *</pattern>
+  <template>
+    <srai>FIND CHARGING SPOT</srai>
+  </template>
+</category>
+
+<!-- ArUco Marker Commands -->
+<category>
+  <pattern>DETECT ARUCO</pattern>
+  <template>
+    🔍 Scanning for ArUco markers...
+    <think>
+      <set name="direction">detect aruco</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>SCAN MARKERS</pattern>
+  <template>
+    <srai>DETECT ARUCO</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>LOOK FOR MARKERS</pattern>
+  <template>
+    <srai>DETECT ARUCO</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>ARUCO MARKERS</pattern>
+  <template>
+    <srai>DETECT ARUCO</srai>
+  </template>
+</category>
+
+<!-- Battery Configuration -->
+<category>
+  <pattern>SET BATTERY THRESHOLD *</pattern>
+  <template>
+    I'll update the battery threshold to <star/>%.
+    <think>
+      <set name="direction">set battery threshold <star/></set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY THRESHOLD *</pattern>
+  <template>
+    <srai>SET BATTERY THRESHOLD <star/></srai>
+  </template>
+</category>
+
+<category>
+  <pattern>WARNING THRESHOLD *</pattern>
+  <template>
+    <srai>SET BATTERY THRESHOLD <star/></srai>
+  </template>
+</category>
+
+<!-- Battery Information -->
+<category>
+  <pattern>BATTERY INFO</pattern>
+  <template>
+    📊 Let me get detailed battery information for you.
+    <think>
+      <set name="direction">battery info</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY DETAILS</pattern>
+  <template>
+    <srai>BATTERY INFO</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY CONFIG</pattern>
+  <template>
+    <srai>BATTERY INFO</srai>
+  </template>
+</category>
+
+<!-- Start/Stop Battery Monitoring -->
+<category>
+  <pattern>START BATTERY MONITORING</pattern>
+  <template>
+    🔋 Starting battery monitoring system...
+    <think>
+      <set name="direction">start battery monitoring</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>STOP BATTERY MONITORING</pattern>
+  <template>
+    🔋 Stopping battery monitoring system...
+    <think>
+      <set name="direction">stop battery monitoring</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>ENABLE BATTERY MONITORING</pattern>
+  <template>
+    <srai>START BATTERY MONITORING</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>DISABLE BATTERY MONITORING</pattern>
+  <template>
+    <srai>STOP BATTERY MONITORING</srai>
+  </template>
+</category>
+
+<!-- Emergency Landing -->
+<category>
+  <pattern>EMERGENCY LANDING</pattern>
+  <template>
+    🚨 Initiating emergency landing due to battery concerns...
+    <think>
+      <set name="direction">emergency landing</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>EMERGENCY LAND</pattern>
+  <template>
+    <srai>EMERGENCY LANDING</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>SAFE LANDING</pattern>
+  <template>
+    <srai>EMERGENCY LANDING</srai>
+  </template>
+</category>
+
+<!-- Battery Status Responses -->
+<category>
+  <pattern>BATTERY NORMAL</pattern>
+  <template>
+    ✅ Battery level is normal. No immediate action required.
+    <think>
+      <set name="direction">battery normal</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY OK</pattern>
+  <template>
+    <srai>BATTERY NORMAL</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>BATTERY GOOD</pattern>
+  <template>
+    <srai>BATTERY NORMAL</srai>
+  </template>
+</category>
+
+<!-- Charging Status -->
+<category>
+  <pattern>CHARGING STARTED</pattern>
+  <template>
+    🔋 Charging protocol initiated. The drone is now searching for and approaching the charging spot.
+    <think>
+      <set name="direction">charging started</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>CHARGING COMPLETE</pattern>
+  <template>
+    ✅ Charging spot reached successfully! The drone is now positioned for charging.
+    <think>
+      <set name="direction">charging complete</set>
+    </think>
+  </template>
+</category>
+
+<category>
+  <pattern>CHARGING FAILED</pattern>
+  <template>
+    ❌ Charging spot search failed. Please check if ArUco markers are visible and try again.
+    <think>
+      <set name="direction">charging failed</set>
+    </think>
+  </template>
+</category>
+
+<!-- Help Commands -->
+<category>
+  <pattern>BATTERY HELP</pattern>
+  <template>
+    🔋 Battery Control Commands:
+    • "Battery status" - Check current battery level
+    • "Find charging spot" - Search for ArUco marker charging spot
+    • "Start battery monitoring" - Enable automatic battery monitoring
+    • "Set battery threshold X" - Set warning threshold to X%
+    • "Emergency landing" - Perform emergency landing
+    • "Battery info" - Get detailed battery configuration
+  </template>
+</category>
+
+<category>
+  <pattern>HELP BATTERY</pattern>
+  <template>
+    <srai>BATTERY HELP</srai>
+  </template>
+</category>
+
+<category>
+  <pattern>CHARGING HELP</pattern>
+  <template>
+    🔋 Charging System Help:
+    • The system uses ArUco markers to identify charging spots
+    • When battery is low, the drone automatically searches for markers
+    • Place ArUco markers in visible locations for charging spots
+    • Use "Find charging spot" to manually search for charging spots
+    • The system will approach and land on detected charging spots
+  </template>
+</category>
+
+<category>
+  <pattern>HELP CHARGING</pattern>
+  <template>
+    <srai>CHARGING HELP</srai>
+  </template>
+</category>
+
+</aiml> 
